@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">T201</string>
+    <string-array name="arr_len_prog">
+        <item>Java</item>
+        <item>PHP</item>
+        <item>Js</item>
+        <item>Kotlin</item>
+        <item>ReactNative</item>
+        <item>Swift</item>
+        <item>C++</item>
+        <item>C</item>
+    </string-array>
+</resources>

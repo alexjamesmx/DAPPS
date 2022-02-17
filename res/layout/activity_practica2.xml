@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Practica2Activity"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="12">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:weightSum="12">
+
+            <LinearLayout
+                style="@style/Theme.201.Practica_2_cuadros"
+                android:background="@color/practica_2_verde">
+                <ImageView
+                    style="@style/Theme.201.Practica_2_imagenes"
+                    android:src="@drawable/ic_car"></ImageView>
+                <TextView
+                    style="@style/Theme.201.Practica_2_text"
+                    android:text="AUTOMOTRIZ">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Theme.201.Practica_2_cuadros"
+                android:background="@color/practica_2_morado">
+                <ImageView
+                    style="@style/Theme.201.Practica_2_imagenes"
+                    android:src="@drawable/ic_baseline_shopping_bag_24"></ImageView>
+                <TextView
+                    style="@style/Theme.201.Practica_2_text"
+                    android:text="CALZADO Y ROPA">
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:weightSum="12">
+
+            <LinearLayout
+                style="@style/Theme.201.Practica_2_cuadros"
+                android:background="@color/practica_2_naranja">
+                <ImageView
+                    style="@style/Theme.201.Practica_2_imagenes"
+                    android:src="@drawable/ic_bike"></ImageView>
+                <TextView
+                    style="@style/Theme.201.Practica_2_text"
+                    android:text="DEPORTIVO">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Theme.201.Practica_2_cuadros"
+                android:background="@color/practica_2_rojo">
+                <ImageView
+                    style="@style/Theme.201.Practica_2_imagenes"
+                    android:src="@drawable/mask"></ImageView>
+                <TextView
+                    style="@style/Theme.201.Practica_2_text"
+                    android:text="ENTRETENIMIENTO">
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:weightSum="12">
+
+            <LinearLayout
+                style="@style/Theme.201.Practica_2_cuadros"
+                android:background="@color/practica_2_amarillo"
+                >
+                <ImageView
+                    style="@style/Theme.201.Practica_2_imagenes"
+                    android:src="@drawable/ic_restaurant"></ImageView>
+                <TextView
+                    style="@style/Theme.201.Practica_2_text"
+                    android:text="RESTAURANTES">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Theme.201.Practica_2_cuadros"
+                android:background="@color/cyan">
+                <ImageView
+                    style="@style/Theme.201.Practica_2_imagenes"
+                    android:src="@mipmap/jump"></ImageView>
+                <TextView
+                    style="@style/Theme.201.Practica_2_text"
+                    android:text="SALUD Y BELLEZA">
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:weightSum="12">
+
+            <LinearLayout
+                style="@style/Theme.201.Practica_2_cuadros"
+                android:background="@color/practica_2_rosa">
+                <ImageView
+                    style="@style/Theme.201.Practica_2_imagenes"
+                    android:src="@drawable/falling_man"
+                    ></ImageView>
+                <TextView
+                    style="@style/Theme.201.Practica_2_text"
+                    android:text="OTROS">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Theme.201.Practica_2_cuadros"
+                android:background="@color/practica_2_morado_azul">
+                <ImageView
+                    style="@style/Theme.201.Practica_2_imagenes"
+                    android:src="@drawable/ic_more_horiz"></ImageView>
+                <TextView
+                    style="@style/Theme.201.Practica_2_text"
+                    android:text="VER TODOS">
+                </TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+
+
+

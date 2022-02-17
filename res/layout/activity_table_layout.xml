@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TableLayoutActivity"
+    android:orientation="vertical"
+    android:weightSum="12">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:orientation="vertical"
+            android:background="@color/fondo_texto_cal"
+            android:layout_weight="3">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="12,388.23"
+                android:textAlignment="textEnd"
+                android:textSize="32sp"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.1"
+                android:gravity="center"
+                android:layout_marginHorizontal="4dp"
+                android:textColor="@color/black">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/fondo_botones_cal"
+            android:layout_weight="9"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:weightSum="10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp">
+                <TableRow android:layout_weight="2">
+                    <Button android:text="c"
+                        style="@style/Theme.201.Botones_calculadora"></Button>
+                    <Button android:text="+/-"
+                        style="@style/Theme.201.Botones_calculadora"></Button>
+                    <Button android:text="%"
+                        style="@style/Theme.201.Botones_calculadora"></Button>
+                    <Button android:text="enter"
+                        style="@style/Theme.201.Botones_calculadora"></Button>
+                </TableRow>
+                <TableRow android:layout_weight="2">
+                    <Button android:text="7"
+                        style="@style/Theme.201.Botones_calculadora"></Button>
+                    <Button android:text="8"
+                        style="@style/Theme.201.Botones_calculadora"></Button>
+                    <Button android:text="9"
+                        style="@style/Theme.201.Botones_calculadora"></Button>
+                    <Button android:text="X"
+                        style="@style/Theme.201.Botones_calculadora"></Button>
+                </TableRow>
+                <TableRow android:layout_weight="2">
+                    <Button android:text="4"
+                        style="@style/Theme.201.Botones_calculadora"></Button>
+                    <Button android:text="5"
+                        style="@style/Theme.201.Botones_calculadora"></Button>
+                    <Button android:text="6"
+                        style="@style/Theme.201.Botones_calculadora"></Button>
+                    <Button android:text="-"
+                        style="@style/Theme.201.Botones_calculadora"></Button>
+                </TableRow>
+                <TableRow android:layout_weight="2">
+                    <Button android:text="1"
+                        style="@style/Theme.201.Botones_calculadora"></Button>
+                    <Button android:text="2"
+                        style="@style/Theme.201.Botones_calculadora"></Button>
+                    <Button android:text="3"
+                        style="@style/Theme.201.Botones_calculadora"></Button>
+                    <Button android:text="+"
+                        style="@style/Theme.201.Botones_calculadora"></Button>
+                </TableRow>
+                <TableRow android:layout_weight="2">
+                    <Button android:text="0"
+                        style="@style/Theme.201.Botones_calculadora"
+                        android:layout_span="2"></Button>
+                    <Button android:text="."
+                        style="@style/Theme.201.Botones_calculadora"></Button>
+
+                    <Button android:text="="
+                        style="@style/Theme.201.Botones_calculadora"></Button>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+</LinearLayout>

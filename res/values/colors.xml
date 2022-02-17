@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="cyan">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="fondo_texto_cal">#F9F3F3</color>
+    <color name="fondo_botones_cal">#9A9A9A</color>
+    <color name="fondo_boton_cal">#CF52F2</color>
+
+    <color name="practica_2_verde">#97d700</color>
+    <color name='practica_2_morado'>#5a5cf2</color>
+    <color name='practica_2_naranja'>#ff702c</color>
+    <color name='practica_2_rojo'>#DF0202</color>
+    <color name='practica_2_morado_azul'>#1500D3</color>
+    <color name='practica_2_rosa'>#FF18E8</color>
+    <color name='practica_2_imagenes'>#FFFFFF</color>
+    <color name='practica_2_amarillo'>#EAD300</color>
+</resources>

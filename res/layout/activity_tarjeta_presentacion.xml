@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Tarjeta_presentacion"
+    android:weightSum="12">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:fontFamily="arial"
+        android:letterSpacing="0"
+        android:text="Abel Alejandro"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:layout_marginVertical="0dp"
+        android:fontFamily="arial"
+        android:letterSpacing="0"
+        android:text="Santiago García"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="normal" />
+
+    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+        android:id="@+id/view2"
+        android:layout_width="100dp"
+        android:layout_height="1dp"
+        android:layout_weight="3"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:elevation="12dp"
+        android:innerRadius="0dp"
+        android:shape="ring"
+        android:thicknessRatio="1.9"
+        app:cardCornerRadius="100dp"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/yo_alex"/>
+    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="2"
+        android:layout_marginVertical="0dp"
+        android:fontFamily="arial"
+        android:letterSpacing="0"
+        android:text="Full stack software development
+                           Lenguajes: spanish and german
+                                            CEO of calisthenix company"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        />
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal" >
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_email_24"
+        android:layout_marginStart="20dp"></ImageView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="arial"
+            android:letterSpacing="0"
+            android:text="sg.alex32@gmail.com"
+            android:textSize="16sp"
+
+            android:textStyle="normal"
+           />
+        /></LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal" >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_phone_24"
+            android:layout_marginStart="20dp"></ImageView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="arial"
+            android:letterSpacing="0"
+            android:text="4422069324"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            />
+        /></LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal" >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_person_24"
+            android:layout_marginStart="20dp"></ImageView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="arial"
+            android:letterSpacing="0"
+            android:text="Matricula: 2021171016"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            />
+        /></LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:weightSum="12"
+
+     >
+
+    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+        android:layout_marginStart="60dp"
+        android:layout_width="1dp"
+        android:layout_weight="4"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:elevation="12dp"
+        android:innerRadius="0dp"
+        android:shape="ring"
+        android:thicknessRatio="1.9"
+        app:cardCornerRadius="100dp"
+      ><ImageView
+
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/linkedin"/>
+
+    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+        android:layout_marginStart="70dp"
+        android:layout_width="1dp"
+        android:layout_weight="4"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:elevation="12dp"
+        android:innerRadius="0dp"
+        android:shape="ring"
+        android:thicknessRatio="1.9"
+        app:cardCornerRadius="100dp"
+        >
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/facebook_round"/>
+    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+            android:layout_marginStart="70dp"
+            android:layout_width="1dp"
+            android:layout_weight="4"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:elevation="12dp"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9"
+            app:cardCornerRadius="100dp"
+            android:layout_marginEnd="50dp">
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/instagram_icon" />
+        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="arial"
+            android:letterSpacing="0"
+            android:text="Mis redes sociales"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+</LinearLayout>
