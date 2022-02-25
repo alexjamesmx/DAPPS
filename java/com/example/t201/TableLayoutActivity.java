@@ -15,7 +15,8 @@ public class TableLayoutActivity extends AppCompatActivity {
     private TextView calculadoraDisplay;
     private Button btnAC, btnDot, btnxmenos1, btnIgual, btnMenos, btnSuma, btnPorcentaje, btnMultiplicar, btnDivision;
     private double num1, num2;
-    private boolean enOperacion = false, enOperacionMultiplicar = false, enOperacionx1 = false;
+    private boolean enOperacion = false, enOperacionMultiplicar = false;
+    private String tipoOperacion = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,17 +97,17 @@ public class TableLayoutActivity extends AppCompatActivity {
         btnMenos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                tipoOperacion = "resta";
                 if (!enOperacion) {
                     //TOMAMOS EL TEXTO DE LA PANTALLA
                     String textoPantalla = calculadoraDisplay.getText().toString();
                     //CONVERTIMOS EL TEXTO A NUMERO
                     double numeroDisplay = Double.parseDouble(textoPantalla);
                     if (num1 == 0) {
-                        if(num2 != 0){
+                        if (num2 != 0) {
                             num1 = 0;
                             num2 = numeroDisplay;
-                        }
-                       else{
+                        } else {
                             num1 = numeroDisplay;
                         } // 10  10 - 0 = 10  10 - 4 = 6    10-2= 8
                     } else {
@@ -116,6 +117,7 @@ public class TableLayoutActivity extends AppCompatActivity {
                     num1 = resultado;
                     calculadoraDisplay.setText(String.valueOf(resultado));
                     enOperacion = true;
+
                 }
             }
         });
@@ -124,6 +126,7 @@ public class TableLayoutActivity extends AppCompatActivity {
         btnSuma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                tipoOperacion = "suma";
                 if (!enOperacion) {
                     //TOMAMOS EL TEXTO DE LA PANTALLA
                     String textoPantalla = calculadoraDisplay.getText().toString();
@@ -145,6 +148,7 @@ public class TableLayoutActivity extends AppCompatActivity {
         btnMultiplicar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                tipoOperacion = "multiplicacion";
                 if (!enOperacion) {
                     //TOMAMOS EL TEXTO DE LA PANTALLA
                     String textoPantalla = calculadoraDisplay.getText().toString();
@@ -167,6 +171,7 @@ public class TableLayoutActivity extends AppCompatActivity {
         btnDivision.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                tipoOperacion = "division";
                 if (!enOperacion) {
                     //TOMAMOS EL TEXTO DE LA PANTALLA
                     String textoPantalla = calculadoraDisplay.getText().toString();
@@ -189,6 +194,64 @@ public class TableLayoutActivity extends AppCompatActivity {
         btnIgual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String textoPantalla = calculadoraDisplay.getText().toString();
+                double numeroDisplay = Double.parseDouble(textoPantalla);
+                double resultado = 0;
+                if (!enOperacion) {
+                    switch (tipoOperacion) {
+                        case "resta":
+                            if (num1 == 0) {
+                                if (num2 != 0) {
+                                    num1 = 0;
+                                    num2 = numeroDisplay;
+                                } else {
+                                    num1 = numeroDisplay;
+                                }
+                            } else {
+                                num2 = numeroDisplay;
+                            }
+                            resultado = num1 - num2;
+                            num1 = resultado;
+                            calculadoraDisplay.setText(String.valueOf(resultado));
+                            enOperacion = true;
+                            break;
+
+                        case "suma":
+                            if (num1 == 0) {
+                                num1 = numeroDisplay;
+                            } else {
+                                num2 = numeroDisplay;
+                            }
+                            resultado = num1 + num2;
+                            calculadoraDisplay.setText(String.valueOf(resultado));
+                            enOperacion = true;
+                            break;
+
+                        case "multiplicacion":
+                            if (num1 == 0) {
+                                num1 = numeroDisplay;
+                                num2 = 1;
+                            } else if (num1 != 0) {
+                                num2 = numeroDisplay;
+                            }
+                            resultado = num1 * num2;
+                            calculadoraDisplay.setText(String.valueOf(resultado));
+                            enOperacion = true;
+                            break;
+
+                        case "division":
+                            if (num1 == 0) {
+                                num1 = numeroDisplay;
+                                num2 = 1;
+                            } else if (num1 != 0) {
+                                num2 = numeroDisplay;
+                            }
+                            resultado = num1 / num2;
+                            calculadoraDisplay.setText(String.valueOf(resultado));
+                            enOperacion = true;
+                            break;
+                    }
+                }
             }
         });
     }
@@ -226,7 +289,6 @@ public class TableLayoutActivity extends AppCompatActivity {
             calculadoraDisplay.setText(textoPantalla);
             enOperacionMultiplicar = false;
         }
-
 
     }
 
