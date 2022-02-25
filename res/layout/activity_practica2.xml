@@ -1,150 +1,155 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><!--Uso de linear layout para acomodar los elementos usando fluid response con
+uso de weights en widths y/o heights  -->
+<!--Y QUEREMOS VISUALIZAR TODOS LOS ELEMENTOS-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Practica2Activity"
-    android:fillViewport="true">
-
+    android:orientation="vertical"
+    android:weightSum="12"
+    tools:context=".Practica_2_Activity">
+    <!--HIJOS QUE CONTENDRAN MAS VIEWS DENTRO DE EL APARENTANDO 4 FILAS HORIZONTALES
+    es de orientacion horizontal ya que acomodaremos 2 vistas mas de manera horizontal ocupando
+    una mitad de espacio del total cadad una
+    FILA DE 1/4 DE TAMANO VERTICAL-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_height="1dp"
+        android:layout_weight="3"
+        android:orientation="horizontal"
+        android:weightSum="12">
+        <!-- COLUMNA HORIZONTAL CON IMAGEN Y TEXTO CENTRADOS
+        Aqui uso gravity center y ajusto tamanos para el acomodo de elementos;
+        esta vista utiliza una vista dentro de orientacion vertical ya que un texto debe ir debajo
+        de la imagen-->
+        <LinearLayout
+            style="@style/Theme.201.Practica_2_cuadros"
+            android:background="@color/practica_2_verde">
+
+            <ImageView
+                style="@style/Theme.201.Practica_2_imagenes"
+                android:src="@drawable/ic_car"></ImageView>
+
+            <TextView
+                style="@style/Theme.201.Practica_2_text_2"
+                android:text="AUTOMOTRIZ" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/Theme.201.Practica_2_cuadros"
+            android:background="@color/practica_2_morado">
+
+            <ImageView
+                style="@style/Theme.201.Practica_2_imagenes"
+                android:src="@drawable/ic_baseline_shopping_bag_24" />
+
+            <TextView
+                style="@style/Theme.201.Practica_2_text_2"
+                android:text="CALZADO Y ROPA" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- COLUMNA HORIZONTAL CON IMAGEN Y TEXTO CENTRADOS
+       Aqui uso gravity center y ajusto tamanos para el acomodo de elementos;
+       esta vista utiliza una vista dentro de orientacion vertical ya que un texto debe ir debajo
+       de la imagen-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="3"
+        android:orientation="horizontal"
         android:weightSum="12">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_weight="3"
-            android:orientation="horizontal"
-            android:weightSum="12">
+            style="@style/Theme.201.Practica_2_cuadros"
+            android:background="@color/practica_2_naranja">
 
-            <LinearLayout
-                style="@style/Theme.201.Practica_2_cuadros"
-                android:background="@color/practica_2_verde">
-                <ImageView
-                    style="@style/Theme.201.Practica_2_imagenes"
-                    android:src="@drawable/ic_car"></ImageView>
-                <TextView
-                    style="@style/Theme.201.Practica_2_text"
-                    android:text="AUTOMOTRIZ">
-                </TextView>
-            </LinearLayout>
+            <ImageView
+                style="@style/Theme.201.Practica_2_imagenes"
+                android:src="@drawable/ic_bike"/>
 
-            <LinearLayout
-                style="@style/Theme.201.Practica_2_cuadros"
-                android:background="@color/practica_2_morado">
-                <ImageView
-                    style="@style/Theme.201.Practica_2_imagenes"
-                    android:src="@drawable/ic_baseline_shopping_bag_24"></ImageView>
-                <TextView
-                    style="@style/Theme.201.Practica_2_text"
-                    android:text="CALZADO Y ROPA">
-                </TextView>
-            </LinearLayout>
+            <TextView
+                style="@style/Theme.201.Practica_2_text_2"
+                android:text="DEPORTIVO"/>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_weight="3"
-            android:orientation="horizontal"
-            android:weightSum="12">
+            style="@style/Theme.201.Practica_2_cuadros"
+            android:background="@color/practica_2_rojo">
 
-            <LinearLayout
-                style="@style/Theme.201.Practica_2_cuadros"
-                android:background="@color/practica_2_naranja">
-                <ImageView
-                    style="@style/Theme.201.Practica_2_imagenes"
-                    android:src="@drawable/ic_bike"></ImageView>
-                <TextView
-                    style="@style/Theme.201.Practica_2_text"
-                    android:text="DEPORTIVO">
-                </TextView>
-            </LinearLayout>
+            <ImageView
+                style="@style/Theme.201.Practica_2_imagenes"
+                android:src="@drawable/mask"/>
 
-            <LinearLayout
-                style="@style/Theme.201.Practica_2_cuadros"
-                android:background="@color/practica_2_rojo">
-                <ImageView
-                    style="@style/Theme.201.Practica_2_imagenes"
-                    android:src="@drawable/mask"></ImageView>
-                <TextView
-                    style="@style/Theme.201.Practica_2_text"
-                    android:text="ENTRETENIMIENTO">
-                </TextView>
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_weight="3"
-            android:orientation="horizontal"
-            android:weightSum="12">
-
-            <LinearLayout
-                style="@style/Theme.201.Practica_2_cuadros"
-                android:background="@color/practica_2_amarillo"
-                >
-                <ImageView
-                    style="@style/Theme.201.Practica_2_imagenes"
-                    android:src="@drawable/ic_restaurant"></ImageView>
-                <TextView
-                    style="@style/Theme.201.Practica_2_text"
-                    android:text="RESTAURANTES">
-                </TextView>
-            </LinearLayout>
-
-            <LinearLayout
-                style="@style/Theme.201.Practica_2_cuadros"
-                android:background="@color/cyan">
-                <ImageView
-                    style="@style/Theme.201.Practica_2_imagenes"
-                    android:src="@mipmap/jump"></ImageView>
-                <TextView
-                    style="@style/Theme.201.Practica_2_text"
-                    android:text="SALUD Y BELLEZA">
-                </TextView>
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_weight="3"
-            android:orientation="horizontal"
-            android:weightSum="12">
-
-            <LinearLayout
-                style="@style/Theme.201.Practica_2_cuadros"
-                android:background="@color/practica_2_rosa">
-                <ImageView
-                    style="@style/Theme.201.Practica_2_imagenes"
-                    android:src="@drawable/falling_man"
-                    ></ImageView>
-                <TextView
-                    style="@style/Theme.201.Practica_2_text"
-                    android:text="OTROS">
-                </TextView>
-            </LinearLayout>
-
-            <LinearLayout
-                style="@style/Theme.201.Practica_2_cuadros"
-                android:background="@color/practica_2_morado_azul">
-                <ImageView
-                    style="@style/Theme.201.Practica_2_imagenes"
-                    android:src="@drawable/ic_more_horiz"></ImageView>
-                <TextView
-                    style="@style/Theme.201.Practica_2_text"
-                    android:text="VER TODOS">
-                </TextView>
-            </LinearLayout>
-
+            <TextView
+                style="@style/Theme.201.Practica_2_text_2"
+                android:text="ENTRETENIMIENTO"/>
         </LinearLayout>
     </LinearLayout>
-</androidx.core.widget.NestedScrollView>
+    <!-- COLUMNA HORIZONTAL CON IMAGEN Y TEXTO CENTRADOS
+       Aqui uso gravity center y ajusto tamanos para el acomodo de elementos;
+       esta vista utiliza una vista dentro de orientacion vertical ya que un texto debe ir debajo
+       de la imagen-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="3"
+        android:orientation="horizontal"
+        android:weightSum="12">
+        <LinearLayout
+            style="@style/Theme.201.Practica_2_cuadros"
+            android:background="@color/practica_2_amarillo">
+            <ImageView
+                style="@style/Theme.201.Practica_2_imagenes"
+                android:src="@drawable/ic_restaurant"/>
+            <TextView
+                style="@style/Theme.201.Practica_2_text_2"
+                android:text="RESTAURANTES"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/Theme.201.Practica_2_cuadros"
+            android:background="@color/cyan">
+            <ImageView
+                style="@style/Theme.201.Practica_2_imagenes"
+                android:src="@mipmap/jump"/>
+            <TextView
+                style="@style/Theme.201.Practica_2_text_2"
+                android:text="SALUD Y BELLEZA"/>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- COLUMNA HORIZONTAL CON IMAGEN Y TEXTO CENTRADOS
+       Aqui uso gravity center y ajusto tamanos para el acomodo de elementos;
+       esta vista utiliza una vista dentro de orientacion vertical ya que un texto debe ir debajo
+       de la imagen-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="3"
+        android:orientation="horizontal"
+        android:weightSum="12">
+        <LinearLayout
+            style="@style/Theme.201.Practica_2_cuadros"
+            android:background="@color/practica_2_rosa">
+            <ImageView
+                style="@style/Theme.201.Practica_2_imagenes"
+                android:src="@drawable/falling_man"/>
+            <TextView
+                style="@style/Theme.201.Practica_2_text_2"
+                android:text="OTROS"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/Theme.201.Practica_2_cuadros"
+            android:background="@color/practica_2_morado_azul">
 
+            <ImageView
+                style="@style/Theme.201.Practica_2_imagenes"
+                android:src="@drawable/ic_more_horiz"/>
+
+            <TextView
+                style="@style/Theme.201.Practica_2_text_2"
+                android:text="VER TODOS"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
 
 

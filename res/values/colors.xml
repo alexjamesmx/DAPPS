@@ -8,9 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="fondo_texto_cal">#F9F3F3</color>
-    <color name="fondo_botones_cal">#9A9A9A</color>
+    <color name="fondo_botones_cal">#434343</color>
     <color name="fondo_boton_cal">#CF52F2</color>
-
+<!--SOLO HAY COLORES PARA LAS DISTINTAS PRACTICAS-->
     <color name="practica_2_verde">#97d700</color>
     <color name='practica_2_morado'>#5a5cf2</color>
     <color name='practica_2_naranja'>#ff702c</color>

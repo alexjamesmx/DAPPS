@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.T201">
         <activity
-            android:name=".Practica2Activity"
+            android:name=".Practica_3_Activity"
             android:exported="false"
-            android:label='Practica 2'/>
+            android:label="Scroll View"/>
+        <activity
+            android:name=".Practica_2_Activity"
+            android:exported="false"
+            android:label="Practica 2" />
         <activity
             android:name=".TableLayoutActivity"
             android:exported="false"

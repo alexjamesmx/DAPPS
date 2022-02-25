@@ -22,7 +22,7 @@ forma fluid responsive los elementos-->
         <TextView
             android:id="@+id/calculadora_display"
             style="@style/Theme.201.calculadora_textView"
-            android:text="0"
+            android:text="12,388.23"
             >
         </TextView>
     </LinearLayout>
@@ -53,11 +53,9 @@ forma fluid responsive los elementos-->
                     android:text="+/-"
                     style="@style/Theme.201.Botones_calculadora" />
                 <Button
-                    android:id='@+id/btn_porcentaje'
                     android:text="%"
                     style="@style/Theme.201.Botones_calculadora"/>
                 <Button
-                    android:id="@+id/btn_Division"
                     android:text="/"
                     style="@style/Theme.201.Botones_calculadora" />
             </TableRow>
@@ -74,7 +72,6 @@ forma fluid responsive los elementos-->
                     style="@style/Theme.201.Botones_calculadora"
                     android:onClick="clickBoton"/>
                 <Button android:text="X"
-                    android:id="@+id/btn_Multiplicar"
                     style="@style/Theme.201.Botones_calculadora" />
             </TableRow>
             <!--TERCER FILA con table row que ocupara un quinto del tamano total

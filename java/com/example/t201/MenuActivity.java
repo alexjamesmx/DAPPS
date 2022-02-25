@@ -16,7 +16,8 @@ public class MenuActivity extends AppCompatActivity {
     private Button btnSextoEjercicio;
     private Button btnSeptimoEjercicio;
     private Button btnOctavoEjercicio;
-    private Button btnPractica2;
+    private Button btnPractica_2;
+    private Button btnPractica_3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +30,8 @@ public class MenuActivity extends AppCompatActivity {
               btnSextoEjercicio = findViewById(R.id.btn_SextoEjercicio);
               btnSeptimoEjercicio = findViewById(R.id.btn_SeptimoEjercicio);
               btnOctavoEjercicio = findViewById(R.id.btn_OctavoEjercicio);
-              btnPractica2 = findViewById(R.id.btn_Practica2);
+              btnPractica_2 = findViewById(R.id.btn_Practica_2);
+              btnPractica_3 = findViewById(R.id.btn_Practica_3);
               btnPrimerEjercicio.setOnClickListener(new View.OnClickListener() {
                   @Override
                   public void onClick(View view) {
@@ -125,13 +127,24 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        btnPractica2.setOnClickListener(new View.OnClickListener() {
+        btnPractica_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(
                         new Intent(
                                 MenuActivity.this,
-                                Practica2Activity.class
+                                Practica_2_Activity.class
+                        )
+                );
+            }
+        });
+        btnPractica_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(
+                        new Intent(
+                                MenuActivity.this,
+                                Practica_3_Activity.class
                         )
                 );
             }
