@@ -15,7 +15,7 @@ public class TableLayoutActivity extends AppCompatActivity {
     private TextView calculadoraDisplay;
     private Button btnAC, btnDot, btnxmenos1, btnIgual, btnMenos, btnSuma, btnPorcentaje, btnMultiplicar, btnDivision;
     private double num1, num2;
-    private boolean enOperacion = false, enOperacionMultiplicar = false, enOperacionx1 = false ;
+    private boolean enOperacion = false, enOperacionMultiplicar = false, enOperacionx1 = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,15 +79,15 @@ public class TableLayoutActivity extends AppCompatActivity {
         btnxmenos1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    String textoPantalla = calculadoraDisplay.getText().toString();
-                    double numeroDisplay = Double.parseDouble(textoPantalla);
-                    if (num1 == 0) {
-                        num1 = numeroDisplay;
-                    } else {
-                        num2 = numeroDisplay;
-                    }
-                    numeroDisplay = numeroDisplay * -1;
-                    calculadoraDisplay.setText(String.valueOf(numeroDisplay));
+                String textoPantalla = calculadoraDisplay.getText().toString();
+                double numeroDisplay = Double.parseDouble(textoPantalla);
+                if (num1 == 0) {
+                    num1 = numeroDisplay;
+                } else {
+                    num2 = numeroDisplay;
+                }
+                numeroDisplay = numeroDisplay * -1;
+                calculadoraDisplay.setText(String.valueOf(numeroDisplay));
                 enOperacion = true;
             }
         });
@@ -102,14 +102,19 @@ public class TableLayoutActivity extends AppCompatActivity {
                     //CONVERTIMOS EL TEXTO A NUMERO
                     double numeroDisplay = Double.parseDouble(textoPantalla);
                     if (num1 == 0) {
-                        num1 = numeroDisplay;
+                        if(num2 != 0){
+                            num1 = 0;
+                            num2 = numeroDisplay;
+                        }
+                       else{
+                            num1 = numeroDisplay;
+                        } // 10  10 - 0 = 10  10 - 4 = 6    10-2= 8
                     } else {
-                        num2 = numeroDisplay;
+                        num2 = numeroDisplay; // 4           4
                     }
                     double resultado = num1 - num2;
+                    num1 = resultado;
                     calculadoraDisplay.setText(String.valueOf(resultado));
-                    num1 = 0;
-                    num2 = 0;
                     enOperacion = true;
                 }
             }
@@ -148,7 +153,7 @@ public class TableLayoutActivity extends AppCompatActivity {
                     if (num1 == 0) {
                         num1 = numeroDisplay;
                         num2 = 1;
-                    } else if(num1 != 0){
+                    } else if (num1 != 0) {
                         num2 = numeroDisplay;
                     }
                     double resultado = num1 * num2;
@@ -170,7 +175,7 @@ public class TableLayoutActivity extends AppCompatActivity {
                     if (num1 == 0) {
                         num1 = numeroDisplay;
                         num2 = 1;
-                    } else if(num1 != 0){
+                    } else if (num1 != 0) {
                         num2 = numeroDisplay;
                     }
                     double resultado = num1 / num2;
