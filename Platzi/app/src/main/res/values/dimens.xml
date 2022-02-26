@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <dimen name="text_size">14dp</dimen>
+    <dimen name='width_logo'>130dp</dimen>
+    <dimen name='margin_default'>12dp</dimen>
+</resources>
